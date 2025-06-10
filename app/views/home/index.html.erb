@@ -1,76 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Nine Lives For All</title>
-  <%= stylesheet_link_tag "application", media: "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <style>
-    body {
-      background-color: #0b1f3a; /* dark navy blue */
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 40px;
-    }
+  <head>
+    <title>Nine Lives For All</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-    img {
-      max-width: 300px;
-      height: auto;
-      border-radius: 12px;
-      margin-bottom: 30px;
-    }
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
 
-    .social-buttons {
-      margin-top: 30px;
-    }
+  <body style="background-color: #0b1d3a; color: white; text-align: center; font-family: sans-serif; padding: 2em;">
+    <%= image_tag 'moo.jpg', alt: 'Moo the Cat', style: 'max-width: 300px; height: auto; border-radius: 10px;' %>
+    <h1 style="margin-top: 1em;">Nine Lives For All</h1>
+    <p style="font-size: 1.2em;">New Website Pending - AOLSEN.06.10.2025</p>
+    <p style="font-size: 1em;">Website Push Expected 06.16.2025</p>
 
-    .social-button {
-      display: inline-block;
-      margin: 0 10px;
-      text-decoration: none;
-      color: white;
-      font-size: 20px;
-      padding: 10px 20px;
-      border: 2px solid white;
-      border-radius: 5px;
-      transition: background-color 0.3s, color 0.3s;
-    }
+    <div style="margin-top: 2em;">
+      <a href="https://www.facebook.com/profile.php?id=61574430428126" target="_blank" style="margin: 0 1em;">
+        <%= image_tag 'facebook.svg', alt: 'Facebook', style: 'width: 40px; height: 40px; transition: transform 0.2s;' %>
+      </a>
+      <a href="https://www.instagram.com/ninelivesforall_az" target="_blank" style="margin: 0 1em;">
+        <%= image_tag 'instagram.svg', alt: 'Instagram', style: 'width: 40px; height: 40px; transition: transform 0.2s;' %>
+      </a>
+      <a href="https://www.tiktok.com/@ninelivesforall" target="_blank" style="margin: 0 1em;">
+        <%= image_tag 'tiktok.svg', alt: 'TikTok', style: 'width: 40px; height: 40px; transition: transform 0.2s;' %>
+      </a>
+    </div>
 
-    .social-button:hover {
-      background-color: white;
-      color: #0b1f3a;
-    }
-
-    .social-button img {
-      vertical-align: middle;
-      width: 20px;
-      height: 20px;
-      margin-right: 8px;
-      filter: invert(1); /* make icons white */
-    }
-  </style>
-</head>
-
-<body>
-  <%= image_tag 'moo.jpg', alt: 'Moo the Cat' %>
-  <h1>Nine Lives For All</h1>
-  <p>New Website Pending - AOLSEN.06.10.2025</p>
-  <p>Website Push Expected 06.16.2025</p>
-
-  <div class="social-buttons">
-    <a class="social-button" href="https://www.facebook.com/profile.php?id=61574430428126" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">Facebook
-    </a>
-    <a class="social-button" href="https://www.instagram.com/ninelivesforall_az" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">Instagram
-    </a>
-    <a class="social-button" href="https://www.tiktok.com/@ninelivesforall" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok">TikTok
-    </a>
-  </div>
-
-  <p>Contact: <a href="mailto:moo@ninelivesforall.org" style="color:white;">moo@ninelivesforall.org</a></p>
-</body>
+    <p style="margin-top: 3em;">Contact: <a href="mailto:moo@ninelivesforall.org" style="color: #aad;">moo@ninelivesforall.org</a></p>
+  </body>
 </html>
-
