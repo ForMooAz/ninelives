@@ -5,9 +5,6 @@ Rails.application.config.assets.version = "1.0"
 
 # Add additional assets to the asset load path.
 # Rails.application.config.assets.paths << Emoji.images_path
-Rails.application.config.assets.precompile += %w[
-  facebook.svg
-  instagram.svg
-  tiktok.svg
-  youtube.svg
-]
+# Ensure SVGs in app/assets/images get fingerprinted and precompiled
+Rails.application.config.assets.precompile += Dir.glob(Rails.root.join("app", "assets", "images", "*.svg")).map { |f| "images/#{File.basename(f)}" }
+
